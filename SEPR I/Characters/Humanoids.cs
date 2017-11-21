@@ -8,24 +8,42 @@ namespace SEPR_I
 {
     public class Humanoids : Character
     {
-        private int XP;
-        private College College;
-        private Subject Subject;
+        private int xP;
+        private College college;
+        private Subject subject;
         private Weapon weapon;
-        private Armour Armour;
+        private Armour armour;
 
 
-        public Humanoids(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int XP, College College, Subject Subject)
-               : base(Name, HP, MP, Acc, Agi, Str, Def, Cha, Kno, Level)
+        public Humanoids(string name, int level, int xP, College college, Subject subject)
+               : base(name, level)
         {
-            this.XP1 = XP;
-            this.College1 = College;
-            this.Subject1 = Subject;
+            this.xP = xP;
+            this.College = college;
+            this.Subject = subject;
+            this.HP = 5 + college.HP;
+            this.MP = 5 + college.MP;
+            this.Acc = 5 + college.Acc;
+            this.Agi = 5 + college.Agi;
+            this.Str = 5 + college.Str;
+            this.Def = 5 + college.Def;
+            this.Agi = 5 + college.Agi;
+            this.Cha = 5 + college.Cha;
+            this.Kno = 5 + college.Kno;
         }
 
-        public College College1 { get => College; set => College = value; }
-        public Subject Subject1 { get => Subject; set => Subject = value; }
+        public College College { get => college; set => college = value; }
+        public Subject Subject { get => subject; set => subject = value; }
         public Weapon Weapon { get => weapon; set => weapon = value; }
-        public int XP1 { get => XP; set => XP = value; }
+        public int XP { get => xP; set => xP = value; }
+
+        public void LevelUp()
+        {
+            if (xP > Level * 1000)
+            {
+                goto stat changing page
+                this.Level = this.Level+1;
+            }
+        }
     }
 }

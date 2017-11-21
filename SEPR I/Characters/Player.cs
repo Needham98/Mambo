@@ -10,9 +10,10 @@ namespace SEPR_I
     {
         private Inventory Inventory;
 
-        public Player(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int XP, College College, Subject Subject)
-            : base(Name, HP, MP, Acc, Agi, Str, Def, Cha, Kno, Level, XP, College, Subject)
+        public Player(string Name, int Level, int XP, College College, Subject Subject)
+            : base(Name, Level, XP, College, Subject)
         {
+            
         }
     }
 }

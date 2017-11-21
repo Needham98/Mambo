@@ -20,6 +20,6 @@ namespace SEPR_I
         }
 
         public int Defense { get => defense; set => defense = value; }
-        internal ArmourType ArmourType { get => armourType; set => armourType = value; }
+        public ArmourType ArmourType { get => armourType; set => armourType = value; }
     }
 }

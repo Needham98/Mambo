@@ -4,54 +4,61 @@ namespace SEPR_I
 {
     public class Character
     {
-        private string Name;
+        private string name;
 
-        private int HP;
-        private int MP;
+        private int hP;
+        private int mP;
 
-        private int CurrentHP;
-        private int CurrentMP;
+        private int currenthP;
+        private int currentmP;
 
-        private int Acc;
-        private int Str;
-        private int Def;
-        private int Agi;
-        private int Cha;
-        private int Kno;
+        private int acc;
+        private int str;
+        private int def;
+        private int agi;
+        private int cha;
+        private int kno;
 
-        private int Level;
+        private int level;
 
-        private Abilities[] Abilities;
+        private Abilities[] abilities;
         
         
 
-        public Character(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level)
+        public Character(string name, int hP, int mP, int acc, int agi, int str, int def, int cha, int kno, int level)
         {
-            this.Name = Name;
-            this.HP1 = HP;
-            this.MP1 = MP;
-            this.Acc1 = Acc;
-            this.Str1 = Str;
-            this.Def1 = Def;
-            this.Agi1 = Agi;
-            this.Cha1 = Cha;
-            this.Kno1 = Kno;
-            this.Level1 = Level;
-            this.CurrentHP1 = HP;
-            this.CurrentMP1 = MP;
+            this.Name = name;
+            this.HP = hP;
+            this.MP = mP;
+            this.Acc = acc;
+            this.Str = str;
+            this.Def = def;
+            this.Agi = agi;
+            this.Cha = cha;
+            this.Kno = kno;
+            this.Level = level;
+            this.CurrenthP = hP;
+            this.CurrentmP= mP;
         }
 
-        public int HP1 { get => HP; set => HP = value; }
-        public int MP1 { get => MP; set => MP = value; }
-        public int CurrentHP1 { get => CurrentHP; set => CurrentHP = value; }
-        public int CurrentMP1 { get => CurrentMP; set => CurrentMP = value; }
-        public int Acc1 { get => Acc; set => Acc = value; }
-        public int Str1 { get => Str; set => Str = value; }
-        public int Def1 { get => Def; set => Def = value; }
-        public int Agi1 { get => Agi; set => Agi = value; }
-        public int Cha1 { get => Cha; set => Cha = value; }
-        public int Kno1 { get => Kno; set => Kno = value; }
-        public int Level1 { get => Level; set => Level = value; }
-        internal Abilities[] Abilities1 { get => Abilities; set => Abilities = value; }
+        public Character(string name, int level)
+        {
+            this.Name = name;
+            this.Level = level;
+        }
+
+        public int HP { get => hP; set => hP = value; }
+        public int MP { get => mP; set => mP = value; }
+        public int CurrenthP { get => currenthP; set => currenthP = value; }
+        public int CurrentmP { get => currentmP; set => currentmP = value; }
+        public int Acc { get => acc; set => acc = value; }
+        public int Str { get => str; set => str = value; }
+        public int Def { get => def; set => def = value; }
+        public int Agi { get => agi; set => agi = value; }
+        public int Cha { get => cha; set => cha = value; }
+        public int Kno { get => kno; set => kno = value; }
+        public int Level { get => level; set => level = value; }
+        internal Abilities[] Abilities1 { get => abilities; set => abilities = value; }
+        public string Name { get => name; set => name = value; }
     }
 }

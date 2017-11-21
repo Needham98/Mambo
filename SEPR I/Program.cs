@@ -12,9 +12,9 @@ namespace SEPR_I
         {
             Character Alasdair = new Character("Alasdair", 5, 5, 5, 5, 5, 5, 5, 5, 5);
             int health;
-            health = Alasdair.Str1.get;
+            health = Alasdair.Str;            
             Armour hat = new Armour("hat", 4, "a hat", false, false, ArmourType.Helmet, 5);
-            hat.ArmourType.set(Chest)
+            College Halifax = new College(Colleges.Halifax, "So far out of york most people forget about it, high chance of death down rape alley", 0, 0, 0, 0, -2, 2, 0, 0);
         }
     }
 }
