@@ -14,18 +14,23 @@ namespace SEPR_I
         private int acc;
         private int mp;
         private int hands;
+        
 
         public Weapon(string name, int value, string description, bool quest, bool consumable, Weapons weapons, int hands, int str, int agi, int acc, int mp)
             : base(name, value, description, quest, consumable)
         {
-            this.hands = hands;
+            this.Hands = hands;
             this.Str = str;
             this.Agi = agi;
-            this.acc = acc;
-            this.mp = mp;
+            this.Acc = acc;
+            this.Mp = mp;           
+            
         }
 
         public int Str { get => str; set => str = value; }
         public int Agi { get => agi; set => agi = value; }
+        public int Acc { get => acc; set => acc = value; }
+        public int Mp { get => mp; set => mp = value; }
+        public int Hands { get => hands; set => hands = value; }
     }
 }
