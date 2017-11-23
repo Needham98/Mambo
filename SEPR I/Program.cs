@@ -15,6 +15,7 @@ namespace SEPR_I
             health = Alasdair.Str;            
             Armour hat = new Armour("hat", 4, "a hat", false, false, ArmourType.Helmet, 5);
             College Halifax = new College(Colleges.Halifax, "So far out of york most people forget about it, high chance of death down rape alley", 0, 0, 0, 0, -2, 2, 0, 0);
+            Humanoids Kieran = new Humanoids("Kkieran", 2,0,Halifax,)
         }
     }
 }

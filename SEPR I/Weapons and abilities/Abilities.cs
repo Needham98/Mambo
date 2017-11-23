@@ -8,5 +8,9 @@ namespace SEPR_I
 {
     public class Abilities
     {
+        private string name;
+        private string description;
+
+
     }
 }

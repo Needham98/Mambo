@@ -9,17 +9,17 @@ namespace SEPR_I
     class Companion:Humanoids
     {
         private Items[] ItemList = new Items[5];
-        private Boolean Active;
+        private Boolean active;
 
-        public Companion(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int XP, College college, Subject subject, Boolean Active)
-           : base(Name, HP, MP, Acc, Agi, Str, Def, Cha, Kno, Level, XP)
+        public Companion(string Name, int Level, int XP, College college, Subject subject, Boolean active)
+           : base(Name, Level, XP, college, subject)
         {
-            this.Active1 = Active;
+            this.Active = active;
         }
         
 
         public Items[] ItemList1 { get => ItemList; }
-        public bool Active1 { get => Active; set => Active = value; }
+        public bool Active { get => active; set => active = value; }
 
         public void SetItem(Items x)
         {
