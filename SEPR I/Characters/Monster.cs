@@ -9,10 +9,10 @@ namespace SEPR_I
     public class Monster : Character
     {
         private int EXP;
-        private Items Loot;
+        private Item Loot;
         private Boolean Boss;
 
-        public Monster(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int EXP,Items Loot, Boolean Boss)
+        public Monster(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int EXP,Item Loot, Boolean Boss)
             : base(Name, HP, MP, Acc, Agi, Str, Def, Cha, Kno, Level)
         {
             this.EXP1 = EXP;
@@ -21,7 +21,7 @@ namespace SEPR_I
         }
 
         public int EXP1 { get => EXP; set => EXP = value; }
-        public Items Loot1 { get => Loot; set => Loot = value; }
+        public Item Loot1 { get => Loot; set => Loot = value; }
         public bool Boss1 { get => Boss; set => Boss = value; }
     }
 }

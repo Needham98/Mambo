@@ -23,7 +23,17 @@ namespace SEPR_I
             //Character[] inGame = new Character[];
             //inGame[0] = Kieran;
 
-            Shop.Parse_CSV();
+            Subject Science = new Subject();
+            College Derwent = new College(Colleges.Derwent, "Derwent", 0, 0, 0, 0, 0, 0, 0, 0);
+            Player testPlayer = new Player("test", 1, 0, Derwent, Science);
+
+            testPlayer.Gold += 5000;
+            Shop.ParseCSV();
+            Shop.buy(Shop.item_data[0], testPlayer);
+
+            Character attack = new Character("attacking", 0);
+            Character def = new Character("def", 0);
+            Abilities.BasicHeal(ref attack, ref def);
 
             // CTRL-F5 TO TEST!
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEPR_I
 {
-    public class Items
+    public class Item
     {
         private string name;
         private int value;
@@ -14,7 +14,7 @@ namespace SEPR_I
         private Boolean quest;
         private Boolean consumable;
 
-        public Items(string name, int value, string description, Boolean quest, Boolean consumable)
+        public Item(string name, int value, string description, Boolean quest, Boolean consumable)
         {
             this.Name = name;
             this.Value = value;

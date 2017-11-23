@@ -54,7 +54,7 @@
     <Compile Include="Weapons and abilities\College.cs" />
     <Compile Include="Characters\Companions.cs" />
     <Compile Include="Characters\Humanoids.cs" />
-    <Compile Include="Weapons and abilities\Items.cs" />
+    <Compile Include="Weapons and abilities\Item.cs" />
     <Compile Include="Characters\Monster.cs" />
     <Compile Include="Characters\Player.cs" />
     <Compile Include="Program.cs" />
