@@ -23,8 +23,6 @@ namespace SEPR_I
 
         private Abilities[] abilities;
         
-        
-
         public Character(string name, int hP, int mP, int acc, int agi, int str, int def, int cha, int kno, int level)
         {
             this.Name = name;
