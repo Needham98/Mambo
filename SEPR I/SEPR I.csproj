@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test\Shop.cs" />
     <Compile Include="Town\Shop.cs" />
     <Compile Include="Weapons and abilities\Abilities.cs" />
     <Compile Include="Characters\Character.cs" />

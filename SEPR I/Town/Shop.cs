@@ -8,6 +8,10 @@ namespace SEPR_I
 {
     class Shop
     {
+        //read in csv of all items
+
+
+
     }
     
 }
