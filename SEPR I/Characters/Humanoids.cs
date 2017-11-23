@@ -41,7 +41,7 @@ namespace SEPR_I
         {
             if (xP > Level * 1000)
             {
-                goto stat changing page
+                //goto stat changing page
                 this.Level = this.Level+1;
             }
         }

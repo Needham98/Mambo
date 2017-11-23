@@ -31,7 +31,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SEPR_I.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Town\Shop.cs" />
-    <Compile Include="Combat.cs" />
     <Compile Include="Weapons and abilities\Abilities.cs" />
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Weapons and abilities\Armour.cs" />

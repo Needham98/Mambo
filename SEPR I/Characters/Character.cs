@@ -26,7 +26,7 @@ namespace SEPR_I
 
         private int level;
 
-        private Abilities[] abilities;
+        //private Abilities[] abilities;
         
         public Character(string name, int hP, int mP, int acc, int agi, int str, int def, int cha, int kno, int level)
         {
@@ -68,7 +68,7 @@ namespace SEPR_I
         public int Kno { get => kno; set => kno = value; }
 
         public int Level { get => level; set => level = value; }
-        internal Abilities[] Abilities1 { get => abilities; set => abilities = value; }        
+        //internal Abilities[] Abilities1 { get => abilities; set => abilities = value; }        
 
         public int CurrenthP { get => currenthP; set => currenthP = value; }
         public int CurrentmP { get => currentmP; set => currentmP = value; }

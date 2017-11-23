@@ -32,7 +32,7 @@ namespace SEPR_I
                 }
                 else
                 {
-                    if (i == 5) { new error }
+                    //if (i == 5) { new error }
                 }
             }
         }
