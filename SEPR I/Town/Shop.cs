@@ -36,19 +36,19 @@ namespace SEPR_I
             }
         }
 
-        public static void buy(Item item, Player player) // or pass in item as string?, Player is there 
+        public static void buy(Item item) // or pass in item as string?, Player is temporary during testing
         {
-            if (player.Gold >= item.Value)
+            if (Player.Gold >= item.Value)
             {
                 //Player.addToInventory(item); //method yet to be made
-                player.Gold -= item.Value;
+                Player.Gold -= item.Value;
             }
         }
 
-        public static void sell(Item item, Player player) // or pass in item as string?
+        public static void sell(Item item) // or pass in item as string?
         {
             //Player.removeFromInventory(item); //method yet to be made
-            player.Gold += (int)Math.Round(item.Value * 0.5); //0.5 arbitrary atm
+            Player.Gold += (int)Math.Round(item.Value * 0.5); //0.5 arbitrary atm
         }
     }
 }

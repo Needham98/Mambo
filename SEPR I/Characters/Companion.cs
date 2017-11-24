@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SEPR_I
 {
-    class Companion:Humanoids
+    class Companion:Humanoid
     {
         private Item[] ItemList = new Item[5];
         private Boolean active;
 
-        public Companion(string Name, int Level, int XP, College college, Subject subject, Boolean active)
+        public Companion(string Name, int Level, int XP, string college, Subject subject, Boolean active)
            : base(Name, Level, XP, college, subject)
         {
             this.Active = active;
