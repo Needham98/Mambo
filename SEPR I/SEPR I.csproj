@@ -51,9 +51,8 @@
     <Compile Include="Characters\Character.cs" />
     <Compile Include="Weapons and abilities\Armour.cs" />
     <Compile Include="Weapons and abilities\Enums.cs" />
-    <Compile Include="Weapons and abilities\College.cs" />
-    <Compile Include="Characters\Companions.cs" />
-    <Compile Include="Characters\Humanoids.cs" />
+    <Compile Include="Characters\Companion.cs" />
+    <Compile Include="Characters\Humanoid.cs" />
     <Compile Include="Weapons and abilities\Item.cs" />
     <Compile Include="Characters\Monster.cs" />
     <Compile Include="Characters\Player.cs" />
