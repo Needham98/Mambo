@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SEPR_I
 {
-    public class Weapon:Items
+    public class Weapon:Item
     {
         private Weapons weapons;
         private int str;

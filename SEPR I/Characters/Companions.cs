@@ -8,7 +8,7 @@ namespace SEPR_I
 {
     class Companion:Humanoids
     {
-        private Items[] ItemList = new Items[5];
+        private Item[] ItemList = new Item[5];
         private Boolean active;
 
         public Companion(string Name, int Level, int XP, College college, Subject subject, Boolean active)
@@ -18,10 +18,10 @@ namespace SEPR_I
         }
         
 
-        public Items[] ItemList1 { get => ItemList; }
+        public Item[] ItemList1 { get => ItemList; }
         public bool Active { get => active; set => active = value; }
 
-        public void SetItem(Items x)
+        public void SetItem(Item x)
         {
             for (int i = 0; i < 5; i++)
             {
@@ -32,7 +32,7 @@ namespace SEPR_I
                 }
                 else
                 {
-                    if (i == 5) { new error }
+                    //if (i == 5) { new error }
                 }
             }
         }

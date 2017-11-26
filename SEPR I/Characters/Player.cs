@@ -8,7 +8,7 @@ namespace SEPR_I
 {
     public class Player : Humanoids
     {
-        private Inventory Inventory;
+        //private Inventory Inventory;
 
         public Player(string Name, int Level, int XP, College College, Subject Subject)
             : base(Name, Level, XP, College, Subject)

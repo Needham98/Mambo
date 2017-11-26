@@ -9,6 +9,7 @@ namespace SEPR_I
     public class Humanoids : Character
     {
         private int xP;
+        private int gold = 0; //assuming gold is 0 on object instantiation
         private College college;
         private Subject subject;
         private Weapon weapon;
@@ -36,12 +37,13 @@ namespace SEPR_I
         public Subject Subject { get => subject; set => subject = value; }
         public Weapon Weapon { get => weapon; set => weapon = value; }
         public int XP { get => xP; set => xP = value; }
+        public int Gold { get => gold; set => gold = value; }
 
         public void LevelUp()
         {
             if (xP > Level * 1000)
             {
-                goto stat changing page
+                //goto stat changing page
                 this.Level = this.Level+1;
             }
         }

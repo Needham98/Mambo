@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SEPR_I
 {
 
-    public class Armour:Items
+    public class Armour:Item
     {
         private ArmourType armourType;
         private int defense;

@@ -73,13 +73,6 @@ namespace SEPR_I
             target.CurrenthP -= 1;
             caster.CurrentmP -= 2;
         }
-
-
-
-
-
-
-
     }
 }
 
