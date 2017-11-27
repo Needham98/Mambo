@@ -11,6 +11,7 @@ namespace SEPR_I
         private int EXP;
         private Item Loot;
         private Boolean Boss;
+        //need ablities to be a skill so that it can be assigned here
 
         public Monster(string Name, int HP, int MP, int Acc, int Agi, int Str, int Def, int Cha, int Kno, int Level, int EXP,Item Loot, Boolean Boss)
             : base(Name, HP, MP, Acc, Agi, Str, Def, Cha, Kno, Level)

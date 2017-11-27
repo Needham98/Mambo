@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Battlefield.cs" />
+    <Compile Include="Combat.cs" />
     <Compile Include="Town\Shop.cs" />
     <Compile Include="Weapons and abilities\Abilities.cs" />
     <Compile Include="Characters\Character.cs" />

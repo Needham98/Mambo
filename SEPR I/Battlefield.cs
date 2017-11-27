@@ -46,10 +46,10 @@ namespace SEPR_I
             return new int[] { 4, 11 };
         }
 
-        public Boolean Occupied(int[] coord)
+        public Character Occupied(int[] coord)
         {
-            if (table[coord[0]][coord[1]] == null) { return false;}
-            else { return true;}
+            if (table[coord[0]][coord[1]] == null) { return null;} 
+            else { return table[coord[0]][coord[1]]; }
         }
 
         public void Delete(Character character)
@@ -77,7 +77,7 @@ namespace SEPR_I
         {
             int[] coord;
             coord=this.GetPosition(character);
-            if(this.Occupied(destination)==false && InRangeDirect(1,coord,destination) == true)
+            if(this.Occupied(destination)==null && InRangeDirect(1,coord,destination) == true)
             { this.Delete(character); table[destination[0]][destination[1]] = character;}           
             
         }
