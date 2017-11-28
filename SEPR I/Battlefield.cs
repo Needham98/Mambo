@@ -52,6 +52,16 @@ namespace SEPR_I
             else { return table[coord[0]][coord[1]]; }
         }
 
+        public Boolean OccupiedBool(int[] coord)
+        {
+            if (coord[0] > 2) { coord[0] = 2; }
+            if (coord[1] > 9) { coord[1] = 9; }
+            if (coord[0] < 0) { coord[0] = 0; }
+            if (coord[1] < 0) { coord[1] = 0; }
+            if (table[coord[0]][coord[1]] == null) { return false; }
+            else { return true; }
+        }
+
         public void Delete(Character character)
         {
             int[] coord;
@@ -76,7 +86,11 @@ namespace SEPR_I
         public void Move(Character character, int[] destination) //destination gained by clicking tile(need way to limit tile?)
         {
             int[] coord;
-            coord=this.GetPosition(character);
+            if (destination[0] > 2) { destination[0] = 2; }
+            if (destination[1] > 9) { destination[1]= 9; }
+            if (destination[0] < 0) { destination[0] = 0; }
+            if (destination[1] < 0) { destination[1] = 0; }
+            coord =this.GetPosition(character);
             if(this.Occupied(destination)==null && InRangeDirect(1,coord,destination) == true)
             { this.Delete(character); table[destination[0]][destination[1]] = character;}           
             

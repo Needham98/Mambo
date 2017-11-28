@@ -8,7 +8,7 @@ namespace SEPR_I
 {
     public class Combat
     {
-        public void StartLoop(Character[][] inGame)
+        public void StartLoop(Character[][] inGame) //possibly area code also given if multiple battlefield maps are created, also possible specific boss battles
         {
             Battlefield battlefield= new Battlefield();
             Character[] Humans = inGame[0];
@@ -58,6 +58,7 @@ namespace SEPR_I
                     int[] coord = battlefield.GetPosition(current);
                     int range; //need to access range from monsters skill
                     Boolean attacked = false;
+                    Boolean moved = false;
 
                     for (int k=1; k>range; k++)
                     {
@@ -71,7 +72,7 @@ namespace SEPR_I
                             attacked = true;
                             break;
                         }
-                        int[] behind = new int[] { coord[0], (coord[1] + 1) };
+                        int[] behind = new int[] { coord[0], (coord[1] + k) };
                         Character availableBehind = battlefield.Occupied(behind);
                         if (availableBehind.GetType() == Human[0].GetType())
                         {
@@ -79,7 +80,7 @@ namespace SEPR_I
                             attacked = true;
                             break;
                         }
-                        int[] right = new int[] { coord[0] - 1, (coord[1]) };
+                        int[] right = new int[] { coord[0] - k, (coord[1]) };
                         Character availableRight = battlefield.Occupied(right);
                         if (availableRight.GetType() == Human[0].GetType())
                         {
@@ -89,7 +90,7 @@ namespace SEPR_I
                         }
 
 
-                        int[] left = new int[] { coord[0] + 1, (coord[1]) };
+                        int[] left = new int[] { coord[0] + k, (coord[1]) };
                         Character availableLeft = battlefield.Occupied(left);
                         if (availableLeft.GetType() == Human[0].GetType())
                         {
@@ -99,15 +100,23 @@ namespace SEPR_I
                         }
                     }
 
-                    int[] ahead = new int[] { coord[0], coord[1] - 1 };
-                    battlefield.Move(current, ahead);
-
+                    if (attacked = true && range < 2) { moved = true; }
+                    else if (attacked = true && range > 1)
+                        {
+                        int[] behind = new int[] { coord[0], (coord[1] + 1) };
+                        int[] left = new int[] { coord[0] + 1, (coord[1]) };
+                        int[] right = new int[] { coord[0] - 1, (coord[1]) };
+                        if (battlefield.OccupiedBool(behind) == false) { battlefield.Move(current, behind); moved = true; }
+                        else if(battlefield.OccupiedBool(left) == false) { battlefield.Move(current, left); moved = true; }
+                        else if (battlefield.OccupiedBool(right) == false) { battlefield.Move(current, right); moved = true; }
+                        else { moved = true; }
+                    }
+                    else { int[] ahead = new int[] { coord[0], (coord[1] - 1) }; battlefield.Move(current, ahead); moved = true; }
+                    
                     if (attacked == false)
                     {
                         for (int k = 1; k > range; k++)
                         {
-                            //can we limit the value ahead it searches as its often going to search off the board now
-
                             int[] ahead = new int[] { coord[0], (coord[1] - k) };
                             Character availableAhead = battlefield.Occupied(ahead);
                             if (availableAhead.GetType() == Human[0].GetType())
@@ -139,6 +148,18 @@ namespace SEPR_I
 
 
             }
+                //combat breaks
+                if (Human.Count < 0)
+                {
+                    //load old save
+                }
+                else
+                {
+                    //run level up
+                    //run loot give
+                    //return to map
+                }
+
 
 
             
