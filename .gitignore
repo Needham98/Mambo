@@ -1,7 +1,7 @@
 SEPR/Temp/
-Temp/
 SEPR/Library/metadata/
 SEPR/Library/ShaderCache/
+SEPR/Library/cache
 .bin
 
 ## Ignore Visual Studio temporary files, build results, and
