@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SEPR_I
+﻿namespace SEPR_I
 {
     public class Humanoid : Character
     {
@@ -21,10 +15,10 @@ namespace SEPR_I
             this.xP = xP;
         }
 
-        public Subject Subject { get => subject; set => subject = value; }
-        public Weapon Weapon { get => weapon; set => weapon = value; }
-        public int XP { get => xP; set => xP = value; }
-        public int Gold { get => gold; set => gold = value; }
+        public Subject Subject { get { return subject; } set { subject = value; } }
+        public Weapon Weapon { get { return weapon; } set { weapon = value; } }
+        public int XP { get { return xP; } set { xP = value; } }
+        public int Gold { get { return gold; } set { gold = value; } }
 
         public void LevelUp()
         {

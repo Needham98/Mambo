@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SEPR_I
 {
@@ -21,8 +17,8 @@ namespace SEPR_I
             this.Boss = boss;
         }
 
-        public int Exp { get => exp; set => exp = value; }
-        public Item Loot { get => loot; set => loot = value; }
-        public bool Boss { get => boss; set => boss = value; }
+        public int Exp { get { return exp; } set { exp = value; } }
+        public Item Loot { get { return loot; } set { loot = value; } }
+        public bool Boss { get { return boss; } set { boss = value; } }
     }
 }

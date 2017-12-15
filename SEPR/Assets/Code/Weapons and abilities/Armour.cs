@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SEPR_I
 {
@@ -19,7 +15,7 @@ namespace SEPR_I
             this.Defense = Defense;
         }
 
-        public int Defense { get => defense; set => defense = value; }
-        public ArmourType ArmourType { get => armourType; set => armourType = value; }
+        public int Defense { get { return defense; } set { defense = value; } }
+        public ArmourType ArmourType { get { return armourType; } set { armourType = value; } }
     }
 }

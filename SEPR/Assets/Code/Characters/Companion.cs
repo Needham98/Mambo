@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SEPR_I
 {
@@ -18,14 +14,14 @@ namespace SEPR_I
         }
         
 
-        public Item[] ItemList1 { get => ItemList; }
-        public bool Active { get => active; set => active = value; }
+        public Item[] ItemList1 { get { return ItemList; } }
+        public bool Active { get { return active; } set { active = value; } }
 
         public void SetItem(Item x)
         {
             for (int i = 0; i < 5; i++)
             {
-                if (ItemList[i] is null)
+                if (ItemList[i] == null)
                 {
                     ItemList[i] = x;
                     break;
