@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace SEPR_I
 {
@@ -166,5 +167,58 @@ namespace SEPR_I
 
             }
         }
-    }
+		public static Action ChooseAction(Character current)
+		{
+			List<Action> possibleActions = new List<Action> ();
+
+			StreamReader r = new StreamReader(current.subject + ".txt");
+			string actionStats = r.ReadLine();
+			List<string> actions = new List<string> ();
+			while (actionStats != null)
+			{
+				actions.Add (actionStats);
+				actionStats = r.ReadLine ();
+			}
+			r.Close ();
+
+			foreach (string s in actions)
+			{
+				string[] stats = s.Split ("|");
+				Action a = new Action ();
+				a.damage = (int)stats [0];
+				a.manaCost = (int)stats [1];
+				a.name = stats [2];
+				a.range = (int)stats [3];
+				possibleActions.Add(a);
+				
+			}
+
+			//Display possible actions to user
+
+
+			//choose target & checkRange()
+
+
+		}
+
+		private List<Character> getPossibleTargets (Battlefield b, int range,Character caster)
+		{
+			
+		}
+
+		public static bool CheckRange(Battlefield battle)
+		{
+			
+		}
+
+		public static bool doAction(Action a)
+		{
+			a.doAction ();
+		}
+		public static bool CheckDeath()
+		{
+			//Todo
+		}
+		 
+	}
 }
