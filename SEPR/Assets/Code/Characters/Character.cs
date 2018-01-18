@@ -1,4 +1,7 @@
-﻿namespace SEPR_I
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+namespace SEPR_I
 {
     public class Character
     {
@@ -46,6 +49,7 @@
             this.Currentagi = agi;
             this.Currentcha = cha;
             this.Currentkno = kno;
+
         }
 
         public Character(string name, int level)
@@ -64,6 +68,7 @@
         public int Agi { get { return agi; } set { agi = value; } }
         public int Cha { get { return cha; } set { cha = value; } }
         public int Kno { get { return kno; } set { kno = value; } }
+        
 
         public int Level { get { return level; } set { level = value; } }
         //internal Abilities[] Abilities1 { get { return abilities; } set { abilities = value; }        
@@ -76,5 +81,10 @@
         public int Currentagi { get { return currentagi; } set { currentagi = value; } }
         public int Currentcha { get { return currentcha; } set { currentcha = value; } }
         public int Currentkno { get { return currentkno; } set { currentkno = value; } }
+        
+
+
+
+
     }
 }

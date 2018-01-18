@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
+using System.Net;
+using System.Collections.Generic;
 
-namespace AssemblyCSharp
+namespace SEPR_I
 {
 	public class Action
 	{
@@ -20,18 +23,18 @@ namespace AssemblyCSharp
 
 		public void doAction()
 		{
-			if(caster.CurrentMp > manaCost)
+			if(caster.CurrentmP > manaCost)
 			{
 				foreach (Character c in targets)
 				{
-					c.CurrentHp -= damage;
+					c.CurrenthP -= damage;
 				}
 
-				caster.CurrentMp -= manaCost;
+				caster.CurrentmP -= manaCost;
 			}
 			else
 			{
-				
+				//not enough mana
 			}
 
 
