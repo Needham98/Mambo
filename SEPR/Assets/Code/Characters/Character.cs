@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace SEPR_I
 {
@@ -56,27 +57,117 @@ namespace SEPR_I
             this.Level = level;
         }
 
-        public string Name { get => name; set => name = value; }
+        public string Name { get { return name; }
+            set
+            {
+                name = value;
+            }
+        }
 
-        public int HP { get => hP; set => hP = value; }
-        public int MP { get => mP; set => mP = value; }        
-        public int Acc { get => acc; set => acc = value; }
-        public int Str { get => str; set => str = value; }
-        public int Def { get => def; set => def = value; }
-        public int Agi { get => agi; set => agi = value; }
-        public int Cha { get => cha; set => cha = value; }
-        public int Kno { get => kno; set => kno = value; }
+        public int HP { get { return hP; }
+            set
+            {
+                hP = value;
+            }
+        }
+        public int MP { get { return mP; }
+            set
+            {
+                mP = value;
+            }
+        }        
+        public int Acc { get { return acc; }
+            set
+            {
+                acc = value;
+            }
+        }
+        public int Str { get { return str; }
+            set
+            {
+                str = value;
+            }
+        }
+        public int Def { get { return def; }
+            set
+            {
+                def = value;
+            }
+        }
+        public int Agi { get { return agi; }
+            set
+            {
+                agi = value;
+            }
+        }
+        public int Cha { get { return cha; }
+            set
+            {
+                cha = value;
+            }
+        }
+        public int Kno { get { return kno; }
+            set
+            {
+                kno = value;
+            }
+        }
 
-        public int Level { get => level; set => level = value; }
+        public int Level { get { return level; }
+            set
+            {
+                level = value;
+            }
+        }
         //internal Abilities[] Abilities1 { get => abilities; set => abilities = value; }        
 
-        public int CurrenthP { get => currenthP; set => currenthP = value; }
-        public int CurrentmP { get => currentmP; set => currentmP = value; }
-        public int Currentacc { get => currentacc; set => currentacc = value; }
-        public int Currentstr { get => currentstr; set => currentstr = value; }
-        public int Currentdef { get => currentdef; set => currentdef = value; }
-        public int Currentagi { get => currentagi; set => currentagi = value; }
-        public int Currentcha { get => currentcha; set => currentcha = value; }
-        public int Currentkno { get => currentkno; set => currentkno = value; }
+        public int CurrenthP { get { return currenthP; }
+            set
+            {
+                currenthP = value;
+            }
+        }
+        public int CurrentmP { get { return currentmP; }
+            set
+            {
+                currentmP = value;
+            }
+        }
+        public int Currentacc { get { return currentacc; }
+            set
+            {
+                currentacc = value;
+            }
+        }
+        public int Currentstr { get { return currentstr; }
+            set
+            {
+                currentstr = value;
+            }
+        }
+        public int Currentdef { get { return currentdef; }
+            set
+            {
+                currentdef = value;
+            }
+        }
+        public int Currentagi { get { return currentagi; }
+            set
+            {
+                currentagi = value;
+            }
+        }
+        public int Currentcha { get { return currentcha; }
+            set
+            {
+                currentcha = value;
+            }
+        }
+        public int Currentkno { get { return currentkno; }
+            set
+            {
+                currentkno = value;
+            }
+        }
     }
 }

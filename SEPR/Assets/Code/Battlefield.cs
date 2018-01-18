@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using UnityEngine;
 
 namespace SEPR_I
 {
@@ -14,7 +15,6 @@ namespace SEPR_I
         new Character[10],
         new Character[10],
         new Character[10]  
-
         };  
              
         
@@ -67,6 +67,7 @@ namespace SEPR_I
             int[] coord;
             coord = this.GetPosition(character);
             table[coord[0]][coord[1]] = null;
+            character.Translate(0, 0, 10);
 
         }
 
@@ -91,8 +92,9 @@ namespace SEPR_I
             if (destination[0] < 0) { destination[0] = 0; }
             if (destination[1] < 0) { destination[1] = 0; }
             coord =this.GetPosition(character);
+            int[] change = { destination[0] - coord[0], destination[1] - coord[1] };
             if(this.Occupied(destination)==null && InRangeDirect(1,coord,destination) == true)
-            { this.Delete(character); table[destination[0]][destination[1]] = character;}           
+            { this.Delete(character); table[destination[0]][destination[1]] = character; character.Translate(change[1], 0, change[0]); }           
             
         }
 

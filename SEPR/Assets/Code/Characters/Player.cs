@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace SEPR_I
 {
@@ -57,18 +57,83 @@ namespace SEPR_I
                 }
             }
         }
-        public static string Name { get => name; set => name = value; }
-        public static string College { get => college; set => college = value; }
-        public static string Subject { get => subject; set => subject = value; }
-        public static int Gold { get => gold; set => gold = value; }
-        public static int HP { get => hP; set => hP = value; }
-        public static int MP { get => mP; set => mP = value; }
-        public static int Acc { get => acc; set => acc = value; }
-        public static int Str { get => str; set => str = value; }
-        public static int Def { get => def; set => def = value; }
-        public static int Agi { get => agi; set => agi = value; }
-        public static int Cha { get => cha; set => cha = value; }
-        public static int Kno { get => kno; set => kno = value; }
-        public static List<int> XpPerLevel { get => xpPerLevel; set => xpPerLevel = value; }
+        public static string Name { get { return name; }
+            set
+            {
+                name = value;
+            }
+        }
+        public static string College { get { return college; }
+            set
+            {
+                college = value;
+            }
+        }
+        public static string Subject { get { return subject; }
+            set
+            {
+                subject = value;
+            }
+        }
+        public static int Gold { get { return gold; }
+            set
+            {
+                gold = value;
+            }
+        }
+        public static int HP { get { return hP; }
+            set
+            {
+                hP = value;
+            }
+        }
+        public static int MP { get { return mP; }
+            set
+            {
+                mP = value;
+            }
+        }
+        public static int Acc { get { return acc; }
+            set
+            {
+                acc = value;
+            }
+        }
+        public static int Str { get { return str; }
+            set
+            {
+                str = value;
+            }
+        }
+        public static int Def { get { return def; }
+            set
+            {
+                def = value;
+            }
+        }
+        public static int Agi { get { return agi; }
+            set
+            {
+                agi = value;
+            }
+        }
+        public static int Cha { get { return cha; }
+            set
+            {
+                cha = value;
+            }
+        }
+        public static int Kno { get { return kno; }
+            set
+            {
+                kno = value;
+            }
+        }
+        public static List<int> XpPerLevel { get { return xpPerLevel; }
+            set
+            {
+                xpPerLevel = value;
+            }
+        }
     }
 }

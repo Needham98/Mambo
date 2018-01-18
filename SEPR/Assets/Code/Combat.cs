@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
 namespace SEPR_I
 {
     public class Combat
     {
-        public void StartLoop(Character[][] inGame) //possibly area code also given if multiple battlefield maps are created, also possible specific boss battles
+        public void StartLoop(Character[][] inGame) //new battlefield is set up with a given number of monsters and the human characters in use
         {
             Battlefield battlefield= new Battlefield();
             Character[] Humans = inGame[0];
@@ -20,9 +18,9 @@ namespace SEPR_I
 
             battlefield.setUp(inGame);
 
-            while(Human.Count>0 && Monster.Count > 0)
+            while(Human.Count>0 && Monster.Count > 0) //combat loop which continues until one side is defeated
             {
-                List<Character> Available = new List<Character>(Humans);
+                List<Character> Available = new List<Character>(Humans); //this states which characters have been used this turn, list is filled and emtied over and over
                 for ( int i =1;i>(Available.Count);i++) //let player choose who to use first?
                 {
                    
@@ -31,6 +29,8 @@ namespace SEPR_I
                     Available.Remove(current);
                     Boolean move = false;
                     Boolean action = false;
+
+                    //in turn each charater can move and attack in any order
 
                     for (int j =1; j > 2; j++)
                     {
@@ -53,7 +53,7 @@ namespace SEPR_I
                     
                 }
 
-                foreach (Character current in Monster)
+                foreach (Character current in Monster) //this is the monster ai, monsters are very simple and move and attack trying to inflict as much damadge as possible
                 {
                     int[] coord = battlefield.GetPosition(current);
                     int range; //need to access range from monsters skill

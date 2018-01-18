@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace SEPR_I
 {
@@ -23,10 +23,35 @@ namespace SEPR_I
             this.Consumable = consumable;
         }
 
-        public string Name { get => name; set => name = value; }
-        public int Value { get => value; set => this.value = value; }
-        public string Description { get => description; set => description = value; }
-        public bool Quest { get => quest; set => quest = value; }
-        public bool Consumable { get => consumable; set => consumable = value; }
+        public string Name { get { return name; }
+            set
+            {
+                name = value;
+            }
+        }
+        public int Value { get { return value; }
+            set
+            {
+                this.value = value;
+            }
+        }
+        public string Description { get { return description; }
+            set
+            {
+                description = value;
+            }
+        }
+        public bool Quest { get { return quest; }
+            set
+            {
+                quest = value;
+            }
+        }
+        public bool Consumable { get { return consumable; }
+            set
+            {
+                consumable = value;
+            }
+        }
     }
 }

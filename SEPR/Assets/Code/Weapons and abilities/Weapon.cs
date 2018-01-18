@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace SEPR_I
 {
@@ -27,10 +27,35 @@ namespace SEPR_I
             
         }
 
-        public int Str { get => str; set => str = value; }
-        public int Agi { get => agi; set => agi = value; }
-        public int Acc { get => acc; set => acc = value; }
-        public int Mp { get => mp; set => mp = value; }
-        public int Hands { get => hands; set => hands = value; }
+        public int Str { get { return str; }
+            set
+            {
+                str = value;
+            }
+        }
+        public int Agi { get { return agi; }
+            set
+            {
+                agi = value;
+            }
+        }
+        public int Acc { get { return acc; }
+            set
+            {
+                acc = value;
+            }
+        }
+        public int Mp { get { return mp; }
+            set
+            {
+                mp = value;
+            }
+        }
+        public int Hands { get { return hands; }
+            set
+            {
+                hands = value;
+            }
+        }
     }
 }
