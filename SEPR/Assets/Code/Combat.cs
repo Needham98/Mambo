@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace SEPR_I
 {
+    /*
+     * The combat is the loop which runs while a battle is in progress and runs till completion
+     * It brings the current party to a group of monsters to fight
+     */ 
     public class Combat
     {
 

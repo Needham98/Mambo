@@ -6,6 +6,9 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * Monster extends Character, they have the ability to give out items and gold upon being defeated
+     */ 
     public class Monster : Character
     {
         private int exp;

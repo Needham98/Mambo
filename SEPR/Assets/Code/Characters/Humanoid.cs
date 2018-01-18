@@ -6,6 +6,10 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * Humanoids extends Character to give class and ability to hold items and wear armour they also can access the money system
+     */ 
+
     public class Humanoid : Character
     {
         private int xP;

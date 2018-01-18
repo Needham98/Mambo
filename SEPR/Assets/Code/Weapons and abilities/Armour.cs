@@ -6,7 +6,10 @@ using System.Threading;
 
 namespace SEPR_I
 {
-
+    /*
+     * The players can equip armour for extra strength bonus
+     * this is still to be completed and is in layout for the next team
+     */ 
     public class Armour:Item
     {
         private ArmourType armourType;

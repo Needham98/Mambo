@@ -6,6 +6,11 @@ using System.Threading;
 
 namespace SEPR_I
 {
+
+    /*
+     * Companions are player controlled characters in addition to the MC which can be collected around the world
+     * they have all features of a humanoid as well as class and abilities.
+     */ 
     class Companion:Humanoid
     {
         private Item[] ItemList = new Item[5];

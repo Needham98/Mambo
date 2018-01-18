@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace SEPR_I
 {
+    /*
+     * This is the character class it is the base for any sort of moving character with stats.
+     * Its made with a list of all possible stats for a character and their getters and setters
+     */
+
     public class Character
     {
         private string name;

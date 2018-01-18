@@ -6,6 +6,9 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * Items have a wide range of effects and uses, these are not implemnted but are set out for the next group to do
+     */
     public class Item
     {
         private string name;

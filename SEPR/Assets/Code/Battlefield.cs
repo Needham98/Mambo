@@ -7,6 +7,10 @@ using UnityEngine;
 
 namespace SEPR_I
 {
+    /*
+     * The battlefield is an array of spaces that characters can occupy in the combat phase
+     * The methods help the system find characters and move them around the battlefield
+     */ 
     public class Battlefield
     {
 
@@ -67,7 +71,7 @@ namespace SEPR_I
             int[] coord;
             coord = this.GetPosition(character);
             table[coord[0]][coord[1]] = null;
-            character.Translate(0, 0, 10);
+            character.Translate(0, -10, 0);
 
         }
 

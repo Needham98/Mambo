@@ -6,6 +6,9 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * Subjects give stat changes at base, this is not yet implemented 
+     */ 
     public class Subject
     {
         private Subjects subjects;

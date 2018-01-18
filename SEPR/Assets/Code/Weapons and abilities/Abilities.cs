@@ -6,6 +6,10 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * This is the list of player abilities available to the different classes
+     * they have a wide range of effects but all have the same input of target and caster
+     */ 
     public static class Abilities
     {
         public static void DefUpHealer(ref Character target, ref Character caster)

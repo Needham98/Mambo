@@ -6,6 +6,10 @@ using System.Threading;
 
 namespace SEPR_I
 {
+    /*
+     * the player is the main character and is the customisable character in the game and has an inventory of items as well as 
+     * other abilities.
+     */ 
     public static class Player
     {
         private static int gold = 0;
