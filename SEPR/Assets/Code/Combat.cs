@@ -6,13 +6,15 @@ namespace SEPR_I
 {
     public class Combat
     {
-        public void StartLoop(Character[][] inGame) //new battlefield is set up with a given number of monsters and the human characters in use
+        public void StartLoop(Character[] Humans) //new battlefield is set up with a given number of monsters and the human characters in use
         {
-            Battlefield battlefield= new Battlefield();
-            Character[] Humans = inGame[0];
-            Character[] Monsters = inGame[1];
+            Battlefield battlefield= new Battlefield();            
+            Monster Close = new Monster("Close", 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, null, false);
+            Monster Ranged = new Monster("Ranged", 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, null, false);
+            Character [] Monsters = { Ranged, Ranged, Ranged, Close, Close,Close};
             List<Character> Human = new List<Character>(Humans);
             List<Character> Monster = new List<Character>(Monsters);
+            Character[][] inGame = { Humans, Monsters };
 
             int Exp;
 
