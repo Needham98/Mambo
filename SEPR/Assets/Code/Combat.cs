@@ -6,6 +6,63 @@ namespace SEPR_I
 {
     public class Combat
     {
+
+        public static Action ChooseAction(Player current)
+        {
+            List<Action> possibleActions = new List<Action>();
+
+            StreamReader r = new StreamReader(current. + ".txt");
+            string actionStats = r.ReadLine();
+            List<string> actions = new List<string>();
+            while (actionStats != null)
+            {
+                actions.Add(actionStats);
+                actionStats = r.ReadLine();
+            }
+            r.Close();
+
+            foreach (string s in actions)
+            {
+                string[] stats = s.Split('|');
+                Action a = new Action();
+                a.damage = int.Parse(stats[0]);
+                a.manaCost = int.Parse(stats[1]);
+                a.name = stats[2];
+                a.range = int.Parse(stats[3]);
+                possibleActions.Add(a);
+
+            }
+
+            //Display possible actions to user
+            //On click of action save action to new action below
+
+            Action a = new Action();
+            return a;
+
+
+            //choose Action & get possible targets
+
+
+        }
+
+        private List<Character> getPossibleTargets(Battlefield b, int range, Character caster)
+        {
+            int[] position = b.GetPosition(caster);
+            List<Character> targets = new List<Character>();
+            foreach (Character[] line in b.table)
+            {
+                foreach (Character c in line)
+                {
+                    if (b.InRangeArea(range, b.GetPosition(caster), b.GetPosition(c)) || b.InRangeDirect(range, b.GetPosition(caster), b.GetPosition(c)))
+                    {
+                        targets.Add(c);
+                    }
+                }
+            }
+
+            return targets;
+
+        }
         public void StartLoop(Character[] Humans) //new battlefield is set up with a given number of monsters and the human characters in use
         {
             Battlefield battlefield= new Battlefield();            
@@ -48,7 +105,34 @@ namespace SEPR_I
                         }
                         else if(action == false && ChooseAction == true)
                         {
-                            //luke to sort, should be in form, check range, take action, check death(update exp log)
+                            Action choice = ChooseAction(current);
+                            List<Character> targets = getPossibleTargets(battlefield, choice.range, choice.caster);
+
+                            //Choose target by on clicking on them on battlefield and add to list below that target
+                            List<Character> chosenTargets = new List<Character>();
+                            choice.targets = chosenTargets;
+                            choice.doAction();
+
+                            if (choice.damage > 0)
+                            {
+                                foreach (Character c in chosenTargets)
+                                {
+                                    c.CurrenthP -= choice.damage;
+
+                                    if (CheckDeath(c))
+                                    {
+                                        //Character dead if here 
+                                        battlefield.Delete(c);
+
+
+                                    }
+                                    else if (c.CurrenthP > c.HP)  //character been overhealed so move health back to max hp
+                                        c.CurrenthP = c.HP;
+
+
+
+                                }
+                            }
                         }
                         else { continue; }
                     }                   
@@ -167,5 +251,19 @@ namespace SEPR_I
             
                 
         }
-    }
+
+
+            public static bool doAction(Action a)
+            {
+                a.doAction();
+                return true;
+            }
+            public static bool CheckDeath(Character c)
+            {
+                if (c.CurrenthP <= 0)
+                    return true;
+                else
+                    return false;
+            }
+        }
 }
