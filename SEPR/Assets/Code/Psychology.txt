@@ -1,0 +1,3 @@
+2|1|Bolt|4
+3|2|Lightning bolt|7
+6|5|Fire ball|4
